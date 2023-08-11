@@ -8,7 +8,7 @@
 
 - 对于图像分割任务
 
-  	- 像素级增强会更改原始图像的像素值，但不会更改输出蒙版；
+  - 像素级增强会更改原始图像的像素值，但不会更改输出蒙版；
 
   - **空间级增强**会改变图像和掩模，此时需要重新标注；
 
@@ -29,15 +29,15 @@
 
 - 支持以管道的形式调用统一的接口进行图像转换：
 
-      - ```python
-        import albumentations as A
+  - ```python
+    import albumentations as A
     
     transform = A.Compose([
         A.RandomCrop(512, 512),
         A.RandomBrightnessContrast(p=0.3),
         A.HorizontalFlip(p=0.5),
     ])
-        ```
+    ```
 
 
 
